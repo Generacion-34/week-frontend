@@ -1,11 +1,16 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
 
-const Todo = sequelize.define('todo', {
-  campo1: {
+const ToDo = sequelize.define('todo', {
+  task: {
     type: DataTypes.STRING,
     allowNull: false
   },
+  isCompleted: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  //userId
 });
 
-module.exports = Todo;
+module.exports = ToDo;
